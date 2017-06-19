@@ -30,12 +30,7 @@
           isArray = toString.call(source) == '[object Array]';
 
       if(isArray) {
-        dest = dest || [];
-        for (var x = 0; x < source.length; x++) {
-          if (dest.indexOf(source[x]) === -1) {
-            dest.push(source[x]);
-          }
-        }
+        return source;
       } else if (isObj) {
         dest = dest || {};
         for (var key in source) {
